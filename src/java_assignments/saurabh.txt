@@ -1,0 +1,5 @@
+This is assignment of java!which is given to us.
+This assignment is using HashMap of Java to get the line numbers
+The implementation is done using a HashMap of key type
+String and value as an Arraylist of integers which maintains
+the line number in which a particular word appear in the list.
