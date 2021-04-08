@@ -10,7 +10,7 @@ public class DictionaryMapping {
         HashMap<String, ArrayList<Integer>> h_map = new HashMap<>();
         int count = 1;
         String line;
-        while (sc.hasNext()) {
+        while (sc.hasNextLine()) {
             line = sc.nextLine();
             String[] key_of_map = line.split("[.,?/;:' !]");
             for(int i=0;i<key_of_map.length;i++)
@@ -25,6 +25,7 @@ public class DictionaryMapping {
                     }
                     else
                     {
+                        if(!h_map.get(key_of_map[i]).contains(count))
                        h_map.get(key_of_map[i]).add(count);
                     }
             }
@@ -44,7 +45,7 @@ public class DictionaryMapping {
             ArrayList<Integer> list=h_map.get(str);
             System.out.print(str+": ");
             for(int i=0;i<list.size();i++)
-                System.out.print(i+" ");
+                System.out.print(list.get(i)+" ");
             System.out.println("\n");
         }
     }
