@@ -1,5 +1,6 @@
 package java_assignments;
-
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.lang.Math;
@@ -31,10 +32,31 @@ public class QuoteOfTheDay{
     };
     public static void main(String[] args)
     {
-        System.out.println("Enter the date to print the quote in format dd/mm/yyyy");
-        String date;
+        System.out.println("1.Enter manual date");
+        System.out.println("2.Take user's date ");
+        System.out.println("Enter your choice");
         Scanner sc=new Scanner(System.in);
-        date=sc.nextLine();
+        int choice;
+        choice=sc.nextInt();
+        String date;
+        if(choice==1)
+        {
+            System.out.println("Enter the date to print the quote in format dd/mm/yyyy");
+            date=sc.nextLine();
+        }
+        else if(choice==2)
+        {
+          SimpleDateFormat formatter=new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+          Date date2=new Date();
+          date=formatter.format(date2);
+          System.out.println("The current date and time is:"+date);
+        }
+        else
+        {
+            //date="01/01/2021"
+            System.out.println("Please enter a valid choice");
+            return;
+        }
         if(date.contains("15/08"))
             System.out.println(special_days[0]);
         else if(date.contains("26/01"))
