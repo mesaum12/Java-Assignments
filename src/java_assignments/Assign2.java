@@ -147,6 +147,9 @@ class ItemOperations
        }
        public void displayItem()
        {
+           if(Itemlist.isEmpty())
+               System.out.println("The list is empty");
+           else
            for(Item x:Itemlist)
                System.out.println(x+"\n");
        }

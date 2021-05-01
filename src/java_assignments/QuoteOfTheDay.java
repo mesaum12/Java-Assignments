@@ -41,7 +41,8 @@ public class QuoteOfTheDay{
         String date;
         if(choice==1)
         {
-            System.out.println("Enter the date to print the quote in format dd/mm/yyyy");
+            System.out.print("Enter the date to print the quote in format dd/mm/yyyy:");
+            sc.nextLine();
             date=sc.nextLine();
         }
         else if(choice==2)
@@ -53,7 +54,6 @@ public class QuoteOfTheDay{
         }
         else
         {
-            //date="01/01/2021"
             System.out.println("Please enter a valid choice");
             return;
         }

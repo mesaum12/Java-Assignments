@@ -48,6 +48,7 @@ public class DictionaryMapping {
                 System.out.print(list.get(i)+" ");
             System.out.println("\n");
         }
+        fr.close();
     }
 }
 

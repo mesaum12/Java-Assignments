@@ -1,0 +1,299 @@
+@startuml
+
+title __JAVA_ASSIGNMENTS's Class Diagram__\n
+
+  namespace  {
+    class Item {
+        {static} ~ Code : int
+        ~ Name : String
+        ~ Quantity : int
+        ~ Rate : float
+        ~ Item()
+        ~ displayItem()
+        ~ getName()
+        ~ getQuantity()
+        ~ getRate()
+    }
+  }
+  
+
+  namespace  {
+    class ItemList {
+        ~ I : Item[]
+        {static} ~ i : int
+        + addItem()
+        + changeRate()
+        + itemIssueOrReturn()
+        + itemsMoreThan()
+        + showDetails()
+        + stockAvailable()
+        + updateStock()
+    }
+  }
+  
+
+  namespace  {
+    class Main {
+        {static} + main()
+    }
+  }
+  
+
+  namespace  {
+    class SEO {
+        ~ Interface()
+    }
+  }
+  
+
+  namespace  {
+    namespace ava_assignments {
+      class java_assignments.Assign1 {
+          {static} + main()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ava_assignments {
+      class java_assignments.Assign2 {
+          {static} + main()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ava_assignments {
+      class java_assignments.CheckBalanceBrackets {
+          + solve()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ava_assignments {
+      class java_assignments.CompareByScore {
+          + compare()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ava_assignments {
+      class java_assignments.DepartmentNameOfStudent {
+          ~ h_map : HashMap<Integer, String>
+          + getId()
+          ~ DepartmentNameOfStudent()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ava_assignments {
+      class java_assignments.DictionaryMapping {
+          {static} + main()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ava_assignments {
+      class java_assignments.Doctor {
+          - name : String
+          - patientList : ArrayList<Patient>
+          + getName()
+          + getPatientList()
+          + setName()
+          + setPatientList()
+          ~ Doctor()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ava_assignments {
+      class java_assignments.Hospital {
+          {static} + main()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ava_assignments {
+      class java_assignments.Item {
+          {static} - entry_order : int
+          - item_code : String
+          - item_name : String
+          - qty_avl : int
+          - rate : float
+          + changeItemRate()
+          + getItem_name()
+          + getQty_avl()
+          + getRate()
+          + setItemDetails()
+          + setQty_avl()
+          + toString()
+          ~ Item()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ava_assignments {
+      class java_assignments.ItemOperations {
+          - Itemlist : ArrayList<Item>
+          ~ ItemOperations()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ava_assignments {
+      class java_assignments.ItemOperations.Shopkeeper {
+          + displayItem()
+          + displayPrice()
+          + issueOrReceiveItem()
+          + itemPriceComparison()
+          + qty_available()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ava_assignments {
+      class java_assignments.ItemOperations.Shopkeeper.StockEntryOperator {
+          + addItem()
+          + changeRate()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ava_assignments {
+      class java_assignments.Parentheses {
+          {static} + main()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ava_assignments {
+      class java_assignments.Patient {
+          - SSN : long
+          - bloodPressure : float
+          - doctorAlloted : String
+          - name : String
+          - patient_id : int
+          - temperature : float
+          + getDoctorAlloted()
+          + getName()
+          + getSSN()
+          + getTestDetails()
+          + setPatientDetails()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ava_assignments {
+      class java_assignments.QuoteOfTheDay {
+          {static} - quotes : String[]
+          {static} - special_days : String[]
+          {static} + main()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ava_assignments {
+      class java_assignments.STUDENT {
+          # ID : String
+          # adm_date : String
+          # course : String
+          # dept_name : String
+          # marks : int[]
+          # name : String
+          {static} # number_of_students : int[]
+          # roll : int
+          + getDeptName()
+          + getId()
+          + getName()
+          + getTotalScore()
+          + returnId()
+          + setAdm_date()
+          + setCourse()
+          + setMarks()
+          + setName()
+          + toString()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ava_assignments {
+      class java_assignments.Stack {
+          - stack : char[]
+          - tos : int
+          + pop()
+          + push()
+          ~ Stack()
+          ~ isEmpty()
+      }
+    }
+  }
+  
+
+  namespace  {
+    namespace ava_assignments {
+      class java_assignments.StudentOperations {
+          ~ Student_list : ArrayList<STUDENT>
+          {static} - current_stud_count : int
+          + displayParticularDeptStudents()
+          + displaySorted()
+          + getAdmission()
+          + removeStudent()
+          ~ StudentOperations()
+      }
+    }
+  }
+  
+
+  namespace  {
+    class shopkeeper {
+        ~ Interface()
+    }
+  }
+  
+
+  SEO o-- ItemList : Il
+  java_assignments.CompareByScore .up.|> java.util.Comparator
+  java_assignments.DepartmentNameOfStudent -up-|> java_assignments.STUDENT
+  java_assignments.ItemOperations +-down- java_assignments.ItemOperations.Shopkeeper
+  java_assignments.ItemOperations.Shopkeeper +-down- java_assignments.ItemOperations.Shopkeeper.StockEntryOperator
+  shopkeeper o-- ItemList : Il
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
